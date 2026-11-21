@@ -1,0 +1,10 @@
+{
+  "home-page": {
+    "badge": "Team starter template",
+    "title": "React template ready for the next project.",
+    "description": "A small starter screen that proves providers, routes, features, and shared UI are wired correctly.",
+    "users-feature-title": "Users feature",
+    "users-feature-description": "Example form using React Hook Form, Zod, and shared UI components.",
+    "open-feature": "Open feature"
+  }
+}
