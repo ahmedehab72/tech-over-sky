@@ -97,7 +97,7 @@ function Aircraft({ control }: { control: React.RefObject<FlightControl> }) {
         </mesh>
       </group>
       {faces.map((face, i) => (
-        <mesh key={i}>
+        <mesh key={i} renderOrder={10 + i}>
           <bufferGeometry>
             <bufferAttribute
               attach="attributes-position"
@@ -121,6 +121,10 @@ function Aircraft({ control }: { control: React.RefObject<FlightControl> }) {
             />
           </bufferGeometry>
           <meshBasicMaterial
+            // Draw the paper folds over the wire orbit at every viewing angle.
+            transparent
+            depthTest={false}
+            depthWrite={false}
             map={paper}
             color={i === 0 || i === 3 ? "white" : colors[i]}
             side={DoubleSide}
